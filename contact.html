@@ -7,7 +7,7 @@
     <script src="script.js"></script>
     <title>Milano Art - Contact</title>
 </head>
-<body>
+<body class="contact-page">
     <header class="sticky-header">
         <nav>
             <ul class="top-menu">
@@ -20,27 +20,26 @@
         </nav>
     </header>
 
-    <section id="contact" class="content-section">
+    <section id="contact" class="content-section contact-content">
         <h2>Contact</h2>
         <p>If you have any questions, inquiries, or would like to discuss commissions or collaborations, please feel free to contact me via email:</p>
         <p class="contact-email">milanoart@protonmail.com</p>
         
         <h3>Contact Form</h3>
-        <form id="contact-form" action="submit_form.php" method="post">
+        <p>Use the form below to get in touch. Your feedback and inquiries are important to me.</p>
+        <form id="contact-form" class="contact-form" action="submit_form.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Submit</button>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
         <p>&copy; <span id="current-year"></span> Jonathan Milano</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

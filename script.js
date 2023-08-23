@@ -37,3 +37,22 @@ const currentYearElement = document.getElementById('current-year');
 if (currentYearElement) {
     currentYearElement.textContent = currentYear;
 }
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var form = event.target;
+
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form)
+    }).then(response => response.text())
+      .then(result => {
+        if (result === "success") {
+            alert("Message sent successfully!");
+            form.reset();
+        } else {
+            alert("An error occurred. Please try again.");
+        }
+      });
+});
