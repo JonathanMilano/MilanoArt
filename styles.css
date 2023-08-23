@@ -106,3 +106,27 @@ footer {
 .contact-form {
     margin-top: 20px;
 }
+
+/* Added styles for profile section */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    max-width: 30%;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Increase spacing between paragraphs in profile description */
+.profile-text p {
+    margin-bottom: 20px;
+}

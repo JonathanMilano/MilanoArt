@@ -22,27 +22,28 @@ function closeModal() {
 
 // Close the modal when clicking on the modal overlay
 const modal = document.querySelector("#modal");
-modal.addEventListener("click", function(event) {
+modal.addEventListener("click", (event) => {
     if (event.target === modal) {
         closeModal();
     }
 });
 
+
 // Get the current year
 const currentYear = new Date().getFullYear();
 
 // Find the element with the ID "current-year"
-const currentYearElement = document.querySelector('#current-year');
+const currentYearElement = document.getElementById('current-year');
 
 // Update the text content of the element with the current year
 if (currentYearElement) {
     currentYearElement.textContent = currentYear;
 }
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+document.getElementById("contact-form").addEventListener("submit", (event) => {
     event.preventDefault();
 
-    var form = event.target;
+    const form = event.target;
 
     fetch(form.action, {
         method: "POST",
