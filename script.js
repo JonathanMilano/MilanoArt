@@ -1,10 +1,10 @@
 // Function to open the modal
 function openModal(title, description, paper, size, year, imageSrc) {
-    const modal = document.getElementById("modal");
-    const modalImage = document.getElementById("modal-image");
-    const modalTitle = document.getElementById("modal-title");
-    const modalDescription = document.getElementById("modal-description");
-    const modalDetails = document.getElementById("modal-details");
+    const modal = document.querySelector("#modal");
+    const modalImage = document.querySelector("#modal-image");
+    const modalTitle = document.querySelector("#modal-title");
+    const modalDescription = document.querySelector("#modal-description");
+    const modalDetails = document.querySelector("#modal-details");
 
     modalImage.src = imageSrc;
     modalTitle.textContent = title;
@@ -16,22 +16,23 @@ function openModal(title, description, paper, size, year, imageSrc) {
 
 // Function to close the modal
 function closeModal() {
-    const modal = document.getElementById("modal");
+    const modal = document.querySelector("#modal");
     modal.style.display = "none";
 }
 
 // Close the modal when clicking on the modal overlay
-window.onclick = function(event) {
-    const modal = document.getElementById("modal");
+const modal = document.querySelector("#modal");
+modal.addEventListener("click", function(event) {
     if (event.target === modal) {
         closeModal();
     }
-};
+});
+
 // Get the current year
 const currentYear = new Date().getFullYear();
 
 // Find the element with the ID "current-year"
-const currentYearElement = document.getElementById('current-year');
+const currentYearElement = document.querySelector('#current-year');
 
 // Update the text content of the element with the current year
 if (currentYearElement) {
