@@ -40,6 +40,11 @@ body {
     color: #3498db; /* Bright blue */
 }
 
+/* Change color of visited links */
+.top-menu li a:visited {
+    color: #8e44ad; /* Purple */
+}
+
 .content-section {
     padding: 40px;
     background-color: #f4f4f4; /* Light gray */
@@ -78,6 +83,22 @@ footer {
     color: #ecf0f1; /* Light gray */
     text-align: center;
     padding: 10px 0;
+}
+
+/* Change color of footer links */
+footer a {
+    text-decoration: none;
+    color: #ecf0f1; /* Light gray */
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #3498db; /* Bright blue */
+}
+
+/* Change color of visited footer links */
+footer a:visited {
+    color: #8e44ad; /* Purple */
 }
 
 .contact-page {
