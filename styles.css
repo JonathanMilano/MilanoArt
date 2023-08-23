@@ -2,19 +2,23 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 body {
     font-family: 'Roboto', sans-serif; /* Use the chosen font */
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333; /* Dark gray text */
 }
 
 /* Sticky header style */
 .sticky-header {
     position: sticky;
     top: 0;
-    background-color: #2c3e50; /* Dark blue */
-    color: #ecf0f1; /* Light gray */
+    background-color: #34495e; /* Darker blue */
+    color: #ecf0f1; /* Light gray text */
     z-index: 1000;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
 .top-menu {
@@ -23,42 +27,46 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #2c3e50; /* Dark blue */
+    background-color: #34495e; /* Darker blue */
+    padding: 10px 0; /* Add some padding for better spacing */
 }
 
 .top-menu li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .top-menu li a {
     text-decoration: none;
-    color: #ecf0f1; /* Light gray */
+    color: #ecf0f1; /* Light gray text */
     transition: color 0.3s ease-in-out;
 }
 
 .top-menu li a:hover {
-    color: #3498db; /* Bright blue */
+    color: #3498db; /* Bright blue on hover */
 }
 
 /* Change color of visited links */
 .top-menu li a:visited {
-    color: #8e44ad; /* Purple */
+    color: #8e44ad; /* Purple for visited links */
 }
 
 .content-section {
-    padding: 40px;
-    background-color: #f4f4f4; /* Light gray */
-    color: #333; /* Dark gray */
+    padding: 60px 0; /* More vertical spacing */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text */
 }
 
 .content-section h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #3498db; /* Bright blue heading */
 }
 
+/* Enhanced album display */
 .bandcamp-albums {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 30px;
 }
 
 .bandcamp-album {
@@ -66,88 +74,100 @@ body {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    background-color: #fff; /* White background */
 }
 
 .bandcamp-album:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .album-description {
     margin-top: 15px;
-    font-size: 13px; /* Smaller font size */
-    line-height: 1.5; /* Improved line spacing */
+    font-size: 14px; /* Slightly larger font size */
+    line-height: 1.6; /* Improved line spacing */
+    color: #777; /* Lighter gray text */
 }
 
 footer {
-    background-color: #2c3e50; /* Dark blue */
-    color: #ecf0f1; /* Light gray */
+    background-color: #34495e; /* Darker blue footer */
+    color: #ecf0f1; /* Light gray text */
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-top: 60px; /* More spacing from content */
 }
 
 /* Change color of footer links */
 footer a {
     text-decoration: none;
-    color: #ecf0f1; /* Light gray */
+    color: #ecf0f1; /* Light gray text */
     transition: color 0.3s ease-in-out;
 }
 
 footer a:hover {
-    color: #3498db; /* Bright blue */
+    color: #3498db; /* Bright blue on hover */
 }
 
 /* Change color of visited footer links */
 footer a:visited {
-    color: #8e44ad; /* Purple */
+    color: #8e44ad; /* Purple for visited links */
 }
 
+/* Contact page styles */
 .contact-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f7f7f7;
+    background-color: #f0f3f6; /* Lighter gray background */
 }
 
 .contact-content {
     text-align: center;
     max-width: 600px;
-    padding: 20px;
-    background-color: white;
+    padding: 40px;
+    background-color: #fff; /* White background */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
 .contact-email {
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 20px; /* Larger font size */
+    margin: 30px 0;
+    color: #3498db; /* Bright blue text */
 }
 
 .contact-form {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-/* Added styles for profile section */
+/* Profile section styles */
 .profile {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    justify-content: center;
+    flex-direction: column; /* Center content vertically */
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 .profile-picture {
-    max-width: 30%;
+    max-width: 200px; /* Slightly smaller profile picture */
     height: auto;
-    float: left;
-    margin-right: 20px;
+    border-radius: 50%; /* Rounded profile picture */
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .profile-text {
-    display: flex;
-    flex-direction: column;
+    max-width: 400px;
+    padding: 0 20px; /* Add some horizontal padding */
 }
 
-/* Increase spacing between paragraphs in profile description */
+/* Increased spacing between paragraphs in profile description */
 .profile-text p {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6; /* Improved line spacing */
+    color: #555; /* Slightly darker gray text */
 }
